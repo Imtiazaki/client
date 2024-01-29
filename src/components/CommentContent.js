@@ -64,7 +64,7 @@ export default function CommentContent() {
     console.log(comment);
     window.Echo.channel("comment").listen("CommentCreated", (event) => {
       console.log("Berhasil Listen");
-      setComments((comment) => [...comment, event])
+      setComments((comment) => [...comment, event]);
       /* window.location.reload() */
     });
   };
@@ -106,16 +106,16 @@ export default function CommentContent() {
 
   const handleClose = () => {
     setOpen(false);
-  }
+  };
 
   useEffect(() => {
     getComment((result) => setComments(result));
     /*       window.Echo.channel("comment").listen("CommentCreated", (event) => {
         console.log("Berhasil Listen");
-        forum.push({
-          user_id: event.forum.user_id,
-          title: event.forum.title,
-          body: event.forum.body,
+        comments.push({
+          user_id: event.comment.user_id,
+          title: event.comment.title,
+          body: event.comment.body,
         });
         window.location.reload();
       }); */
@@ -230,7 +230,7 @@ export default function CommentContent() {
                   width="100%"
                 />
                 <Stack direction="row" justifyContent="end">
-                <Button
+                  <Button
                     onClick={handleClose}
                     variant="outlined"
                     color="error"
