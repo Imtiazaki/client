@@ -1,1 +1,1 @@
-Berhasil Listen, tetapi belum bisa menampilkan data secara realtime tanpa refresh page
+Berhasil Listen dengan realtime, tetapi sender belum bisa menampilkan data secara realtime tanpa menggunakan windows.reload
